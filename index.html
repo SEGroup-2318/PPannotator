@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-<div id='parent'>
-    <div id='left-box'>
+<body>
+<div class='center'>
+	<h2> Doordash </h2>
+</div>
+<div class='parent'>
+    <div class='left-box'>
 		<div>
 			<ol>
 				<li>
@@ -42,7 +46,7 @@
 		
 	</div>
 	
-    <div id='right-box'>
+    <div class='right-box'>
 		<div>
 			<ol>
 			  <li>
@@ -176,20 +180,20 @@ body,html{
 li{
   margin: 10px 0;
 }
-#parent{
+.parent{
     border:1px solid black;
     display:table;
     height:100%; 
     width:100%;        
 }
-#left-box{ 
+.left-box{ 
     background-color:#eee;
     display: table-cell;
     vertical-align:middle;
     padding:3px;
     width:50%;
 }
-#right-box{ 
+.right-box{ 
     background-color:#dddddd;
     display: table-cell;
     vertical-align:middle;
@@ -232,6 +236,13 @@ li{
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
 }
 
 .accuracy {
