@@ -481,7 +481,7 @@
 	</div>
 
 	<div class="helpbutton">
-		<button class="feedback" onclick="ToggleGuideDD()">Guide</button>
+		<button class="feedback" id ='guide_btn_DD' onclick="ToggleGuideDD()">Guide</button>
 	</div>
 </div>
 
@@ -1522,7 +1522,7 @@
 		</div>
 	</div>
 	<div class="helpbutton">
-		<button class="feedback" onclick="ToggleGuideLy()">Guide</button>
+		<button class="feedback" id ='guide_btn_Ly' onclick="ToggleGuideLy()">Guide</button>
 	</div>
 </div>
 
@@ -1916,7 +1916,7 @@
 		</div>
 	</div>
 	<div class="helpbutton">
-		<button class="feedback" onclick="ToggleGuideAb()">Guide</button>
+		<button class="feedback" id='guide_btn_Ab' onclick="ToggleGuideAb()">Guide</button>
 	</div>
 </div>
 
@@ -1936,6 +1936,7 @@ body,html{
 .feedback {
   background-color : #31B0D5;
   color: white;
+  font-size: 16px;
   padding: 10px 20px;
   border-radius: 4px;
   border-color: #46b8da;
@@ -1958,7 +1959,7 @@ body,html{
 	padding-left: 15px;
 	overflow-y: scroll;
 	max-height:350px;
-	max-width:350px;
+	max-width:550px;
 
 }
 
@@ -1994,15 +1995,19 @@ li{
 	padding:20px;	
 	text-align: center;  
 }
-#wgtmsr{
- width:250px;   
-color: #000; 
-font-family: myfont;
 
+#wgtmsr{
+	width:250px; 
+	height:40px;	
+	color: #000; 
+	font-family: myfont;
+	font-size: 18px;
 }
+
 #wgtmsr option{
-  width:250px;   
+	width:250px;   
 }
+
 .box{
     height:100%; 
     width:100%; 
@@ -2022,6 +2027,7 @@ font-family: myfont;
 	padding:6px;
 	padding-right: 15px;
 	margin-left: 6px;
+	margin-right: 6px;
 }
 
 .left-box{ 
@@ -2037,6 +2043,7 @@ font-family: myfont;
     display: table-cell;
 	padding:6px;
 	padding-left: 15px;
+	padding-right: 15px;
 	font-family: myfont;
 	font-size: 18px;
 }
@@ -2119,24 +2126,8 @@ font-family: myfont;
 	background-color: #FFC6FF
 }
 
-.fixedButton{
-            position: fixed;
-            bottom: 0px;
-            right: 0px; 
-            padding: 20px;
-        }
-.roundedFixedBtn{
-  height: 60px;
-  line-height: 80px;  
-  width: 60px;  
-  font-size: 2em;
-  font-weight: bold;
-  border-radius: 50%;
-  background-color: #808080;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-}
+
+
 
 ​</style>
 
@@ -2158,28 +2149,37 @@ $(document).ready(function(){
 
 function ToggleGuideDD() {
   var x = document.getElementById("footer_DD");
+  var btn = document.getElementById("guide_btn_DD");
   if (x.style.visibility === "hidden") {
     x.style.visibility = "visible";
+	btn.innerHTML = "Hide"
   } else {
     x.style.visibility = "hidden";
+	btn.innerHTML = "Guide"
   }
 }
 
 function ToggleGuideAb() {
   var x = document.getElementById("footer_Ab");
+  var btn = document.getElementById("guide_btn_Ab");
   if (x.style.visibility === "hidden") {
     x.style.visibility = "visible";
+	btn.innerHTML = "Hide"
   } else {
     x.style.visibility = "hidden";
+	btn.innerHTML = "Guide"
   }
 }
 
 function ToggleGuideLy() {
   var x = document.getElementById("footer_Ly");
+  var btn = document.getElementById("guide_btn_Ly");
   if (x.style.visibility === "hidden") {
     x.style.visibility = "visible";
+	btn.innerHTML = "Hide"
   } else {
     x.style.visibility = "hidden";
+	btn.innerHTML = "Guide"
   }
 }
 </script>
